@@ -1,0 +1,50 @@
+@import 'app';
+
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .list {
+        margin: 24px auto;
+        font-size: .8rem;
+
+        .product {
+            display: flex;
+            align-items: center;
+            max-width: 890px;
+            padding: 12px 24px;
+
+            & + .product {
+                border-top: 1px solid $primary;
+            }
+
+            img {
+                width: 85px;
+                margin-right: 12px;
+            }
+
+            .details {
+                width: 100%;
+            }
+
+            .actions {
+                display: flex;
+                float: right;
+
+                .btn {
+                    margin: 4px;
+                }
+            }
+        }
+    }
+}
+
+.btns {
+    display: flex;
+
+    .btn + .btn {
+        margin-left: 8px;
+    }
+}
