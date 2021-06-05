@@ -116,10 +116,15 @@ article.product {
                 color: $light;
                 font-weight: bold;
                 text-transform: uppercase;
+                margin-bottom: 24px;
+                max-width: 90%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
 
             .price {
-                margin: auto auto 0;
+                margin: 12px auto;
                 color: $secondary;
             }
 
@@ -136,7 +141,7 @@ article.product {
 
             img {
                 width: 125px;
-                margin: 12px;
+                margin: auto 12px 12px;
                 opacity: .8;
                 border: 1px solid $secondary;
             }
@@ -144,7 +149,6 @@ article.product {
             &:hover {
                 box-shadow: 0 4px 16px 2px rgb(220, 220, 220);
                 transform: scale(1);
-                cursor: pointer;
 
                 .title {
                     color: $dark;
