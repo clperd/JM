@@ -12,7 +12,6 @@
             </ul>
         @endif
 
-
         <form method="POST" action="{{ route('admin.products.update', $product) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
@@ -43,7 +42,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn">@lang('admin.buttons.add')</button>
+            <button type="submit" class="btn">@lang('admin.buttons.edit')</button>
         </form>
     </section>
 @endsection

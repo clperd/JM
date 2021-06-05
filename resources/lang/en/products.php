@@ -3,7 +3,7 @@
 return [
 
     'products_list' => 'Products list',
-    'top_sales' => 'Top Sales',
+    'new_products' => 'New Sales',
 
     'buttons' => [
         'see_more' => 'See more',

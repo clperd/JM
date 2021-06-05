@@ -1,41 +1,34 @@
 @import 'app';
 
-#products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+.list {
+    margin: 24px auto;
+    font-size: .8rem;
 
-    .list {
-        margin: 24px auto;
-        font-size: .8rem;
+    .item {
+        display: flex;
+        align-items: center;
+        max-width: 890px;
+        padding: 12px 24px;
 
-        .product {
+        & + .item {
+            border-top: 1px solid $primary;
+        }
+
+        img {
+            width: 85px;
+            margin-right: 12px;
+        }
+
+        .details {
+            width: 100%;
+        }
+
+        .actions {
             display: flex;
-            align-items: center;
-            max-width: 890px;
-            padding: 12px 24px;
+            float: right;
 
-            & + .product {
-                border-top: 1px solid $primary;
-            }
-
-            img {
-                width: 85px;
-                margin-right: 12px;
-            }
-
-            .details {
-                width: 100%;
-            }
-
-            .actions {
-                display: flex;
-                float: right;
-
-                .btn {
-                    margin: 4px;
-                }
+            .btn {
+                margin: 4px;
             }
         }
     }

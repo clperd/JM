@@ -58,7 +58,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 24px;
+    align-items: center;
 }
 
 h1, h4 {
@@ -141,6 +141,10 @@ form {
     color: $primary;
 }
 
+.text-light {
+    color: $light;
+}
+
 .alert {
     border: 1px solid $light;
     border-radius: 2px;
@@ -190,7 +194,7 @@ header {
         flex-grow: 1;
         padding: 4px 8px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
 
         .nav-link {
@@ -306,7 +310,7 @@ footer {
 
 @media (max-width: 480px) {
     html {
-        font-size: 80%;
+        font-size: .9rem;
     }
 
     header {

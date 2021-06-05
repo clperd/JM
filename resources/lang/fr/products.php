@@ -3,7 +3,7 @@
 return [
 
     'products_list' => 'Liste des produits',
-    'top_sales' => 'Meilleures Ventes',
+    'new_products' => 'Nouvelles Ventes',
 
     'buttons' => [
         'see_more' => 'Voir plus',

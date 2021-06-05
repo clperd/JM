@@ -1,4 +1,4 @@
-<li class="product">
+<div class="item">
     <img src="{{ asset("storage/images/products/{$product->id}") }}">
     <div class="details">
         <ul>
@@ -10,10 +10,10 @@
                     </div>
                 </h1>
                 <h4 class="text-primary">${{ $product->price }}</h4>
-                <p>{{ $product->description }}</p>
+                <p class="text-light">{{ $product->description }}</p>
             </li>
         </ul>
     </div>
-</li>
+</div>
 
 <?php /** @var \App\Models\Product $product */ ?>

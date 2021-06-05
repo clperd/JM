@@ -6,6 +6,8 @@
     background-size: cover;
     height: calc(100vh - 48px);
     justify-content: flex-end;
+    align-items: flex-start;
+    margin: 0 auto;
 
     .welcome {
         width: 50%;
@@ -83,7 +85,7 @@ article.product {
     }
 }
 
-#top_products {
+#new_products {
     .product {
         &:hover {
             box-shadow: 0 4px 16px 2px rgb(220, 220, 220);
@@ -170,7 +172,7 @@ article.product {
         }
     }
 
-    #top_products .product, article.product {
+    #new_products .product, article.product {
         flex-direction: column-reverse !important;
     }
 }

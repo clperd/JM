@@ -2,8 +2,9 @@
 
 return [
 
-    'button' => [
+    'buttons' => [
         'add' => 'Add',
+        'edit' => 'Edit',
         'init' => 'Init',
     ],
 

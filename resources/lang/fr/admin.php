@@ -4,6 +4,7 @@ return [
 
     'buttons' => [
         'add' => 'Ajouter',
+        'edit' => 'Edit',
         'init' => 'Réinitialiser',
     ],
 

@@ -12,23 +12,25 @@
         </div>
     </section>
 
-    <section id="top_products">
-        <h1>@lang('products.top_sales')</h1>
+    @if ($latestProducts->isNotEmpty())
+        <section id="new_products">
+            <h1>@lang('products.new_products')</h1>
 
-        @foreach ($latestProducts as $product)
-            <article class="product">
-                <div class="details">
-                    <h1 class="title">{{ $product->name }}</h1>
-                    <p class="description">{{ $product->description }}</p>
-                    <span class="price">${{ $product->price }}</span>
-                    <a href="{{ route('products.show', $product) }}" class="btn">@lang('products.buttons.see_more')</a>
-                </div>
-                <div class="visual">
-                    <img src="{{ asset("storage/images/products/{$product->id}") }}" alt="{{ $product->description }}">
-                </div>
-            </article>
-        @endforeach
-    </section>
+            @foreach ($latestProducts as $product)
+                <article class="product">
+                    <div class="details">
+                        <h1 class="title">{{ $product->name }}</h1>
+                        <p class="description">{{ $product->description }}</p>
+                        <span class="price">${{ $product->price }}</span>
+                        <a href="{{ route('products.show', $product) }}" class="btn">@lang('products.buttons.see_more')</a>
+                    </div>
+                    <div class="visual">
+                        <img src="{{ asset("storage/images/products/{$product->id}") }}" alt="{{ $product->description }}">
+                    </div>
+                </article>
+            @endforeach
+        </section>
+    @endif
 @endsection
 
 <?php /** @var \App\Models\Product[] $latestProducts */ ?>
