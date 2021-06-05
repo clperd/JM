@@ -17,4 +17,11 @@ return [
         'product_price' => 'Prix du produit',
     ],
 
+    'messages' => [
+        'product_added' => 'Produit ajouté avec succès.',
+        'products_reset' => 'Liste des produits réinitialisée avec succès.',
+        'product_edited' => 'Produit modifié avec succès.',
+        'product_deleted' => 'Produit supprimé avec succès.',
+    ],
+
 ];

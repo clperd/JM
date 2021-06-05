@@ -46,7 +46,7 @@ class ProductController extends Controller
                 'required',
                 'file',
                 'mimes:jpg,bmp,png',
-                Rule::dimensions()->ratio(120 / 171),
+                //Rule::dimensions()->ratio(120 / 171), // Retirer pour la démo afin d‘éviter de chercher une image conforme
             ],
         ]);
 
@@ -59,7 +59,7 @@ class ProductController extends Controller
 
         $request->file('product_image')->storeAs('public/images/products', $product->id);
 
-        return redirect()->route('admin.products.index')->with('success_message', 'Produit modifié avec succès.');
+        return redirect()->route('admin.products.index')->with('success_message', trans('admin.messages.product_added'));
     }
 
     /**
@@ -72,7 +72,7 @@ class ProductController extends Controller
 
         (new DemoProductsSeeder)->run();
 
-        return redirect()->route('admin.products.index')->with('success_message', 'Liste des produits réinitialisée avec succès.');
+        return redirect()->route('admin.products.index')->with('success_message', trans('admin.messages.products_reset'));
     }
 
     /**
@@ -102,7 +102,7 @@ class ProductController extends Controller
             'product_image' => [
                 'file',
                 'mimes:jpg,bmp,png',
-                Rule::dimensions()->ratio(120 / 171),
+                //Rule::dimensions()->ratio(120 / 171), // Retirer pour la démo afin d‘éviter de chercher une image conforme
             ],
         ]);
 
@@ -116,7 +116,7 @@ class ProductController extends Controller
             $request->file('product_image')->storeAs('public/images/products', $product->id);
         }
 
-        return redirect()->route('admin.products.index')->with('success_message', 'Produit modifié avec succès.');
+        return redirect()->route('admin.products.index')->with('success_message', trans('admin.messages.product_edited'));
     }
 
     /**
@@ -128,6 +128,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('admin.products.index')->with('success_message', 'Produit supprimé avec succès.');
+        return redirect()->route('admin.products.index')->with('success_message', trans('admin.messages.product_deleted'));
     }
 }

@@ -89,6 +89,7 @@ input {
 .pagination {
     display: flex;
     justify-content: center;
+    margin: 12px auto;
 
     a {
         color: $dark;
