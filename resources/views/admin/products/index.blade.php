@@ -15,7 +15,7 @@
             @endforeach
 
             <div class="pagination">
-                <a href="{{ route('admin.products.index', ['page' => 1]) }}" @if($products->currentPage() === 1) class="disabled" @endif>&laquo;</a>
+                <a href="{{ route('admin.products.index') }}" @if($products->currentPage() === 1) class="disabled" @endif>&laquo;</a>
                 @for ($i = 1; $i <= $products->lastPage(); $i++)
                     <a @if ($i === $products->currentPage()) class="active" @endif href="{{ route('admin.products.index', ['page' => $i]) }}">{{ $i }}</a>
                 @endfor
